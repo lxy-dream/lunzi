@@ -12810,16 +12810,16 @@ exports.default = _default;
         domProps: { value: _vm.value },
         on: {
           change: function($event) {
-            return _vm.$emit("change", $event)
+            return _vm.$emit("change", $event.target.value)
           },
           input: function($event) {
-            return _vm.$emit("input", $event)
+            return _vm.$emit("input", $event.target.value)
           },
           focus: function($event) {
-            return _vm.$emit("focus", $event)
+            return _vm.$emit("focus", $event.target.value)
           },
           blur: function($event) {
-            return _vm.$emit("blur", $event)
+            return _vm.$emit("blur", $event.target.value)
           }
         }
       }),
@@ -12898,19 +12898,15 @@ new _vue.default({
   data: {
     loading1: false,
     loading2: true,
-    loading3: false
+    loading3: false,
+    message: 'hi'
   },
-  created: function created() {
-    var _this = this;
-
-    setTimeout(function () {
-      var event = new Event('change');
-
-      var inputElement = _this.$el.querySelector('input');
-
-      inputElement.dispatchEvent(event);
-      console.log('hi');
-    }, 3000);
+  created: function created() {// setTimeout(() => {
+    //   let event = new Event('change');
+    //   let inputElement = this.$el.querySelector('input')
+    //   inputElement.dispatchEvent(event)
+    //   console.log('hi')
+    // }, 3000)
   },
   methods: {
     inputChange: function inputChange(e) {
@@ -12946,7 +12942,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50652" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52190" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
