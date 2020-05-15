@@ -1,9 +1,5 @@
 <template>
-  <button
-    class="g-button"
-    :class="{ [`icon-${iconPosition}`]: true }"
-    @click="$emit('click')"
-  >
+  <button class="g-button" :class="{ [`icon-${iconPosition}`]: true }" @click="$emit('click')">
     <g-icon class="icon" v-if="icon && !loading" :name="icon"></g-icon>
     <g-icon class="loading icon" v-if="loading" name="loading"></g-icon>
     <div class="content">
@@ -15,23 +11,24 @@
 <script>
 import Icon from "./icon";
 export default {
+  name: "GuluButton",
   components: {
-    "g-icon": Icon,
+    "g-icon": Icon
   },
   props: {
     icon: {},
     loading: {
       type: Boolean,
-      default: false,
+      default: false
     },
     iconPosition: {
       type: String,
       default: "left",
       validator(value) {
         return value === "left" || value === "right";
-      },
-    },
-  },
+      }
+    }
+  }
 };
 </script>
 <style lang="scss">
