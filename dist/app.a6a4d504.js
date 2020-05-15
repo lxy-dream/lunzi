@@ -12882,18 +12882,17 @@ exports.default = void 0;
 //
 //
 //
-//
 var _default = {
   name: "GuluRow",
   props: {
     gutter: {
       type: [Number, String]
-    }
-  },
-  align: {
-    type: String,
-    validator: function validator(value) {
-      return ["left", "right", "center"].includes(value);
+    },
+    align: {
+      type: String,
+      validator: function validator(value) {
+        return ["left", "right", "center"].indexOf(value) >= 0;
+      }
     }
   },
   computed: {
@@ -12907,14 +12906,14 @@ var _default = {
     rowClass: function rowClass() {
       var align = this.align;
       return [align && "align-".concat(align)];
-    },
-    mounted: function mounted() {
-      var _this = this;
-
-      this.$children.forEach(function (vm) {
-        vm.gutter = _this.gutter;
-      });
     }
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    this.$children.forEach(function (vm) {
+      vm.gutter = _this.gutter;
+    });
   }
 };
 exports.default = _default;
