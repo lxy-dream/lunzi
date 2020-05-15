@@ -12890,27 +12890,24 @@ var _default = {
       type: [Number, String]
     }
   },
-  created: function created() {
-    console.log("row created");
-  },
-  mounted: function mounted() {
-    var _this = this;
+  computed: {
+    rowStyle: function rowStyle() {
+      var gutter = this.gutter;
+      return {
+        marginLeft: -gutter / 2 + "px",
+        marginRight: -gutter / 2 + "px"
+      };
+    },
+    mounted: function mounted() {
+      var _this = this;
 
-    console.log("row mounted");
-    console.log(this.$children);
-    this.$children.forEach(function (vm) {
-      vm.gutter = _this.gutter;
-    });
+      this.$children.forEach(function (vm) {
+        vm.gutter = _this.gutter;
+      });
+    }
   }
 };
 exports.default = _default;
-var div = document.createElement("div"); // created
-
-var childDiv = document.createElement("div"); // child created
-
-div.appendChild(childDiv); // child mounted
-
-document.body.appendChild(div); // mounted
         var $19d8da = exports.default || module.exports;
       
       if (typeof $19d8da === 'function') {
@@ -12925,13 +12922,7 @@ document.body.appendChild(div); // mounted
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    {
-      staticClass: "row",
-      style: {
-        marginLeft: -_vm.gutter / 2 + "px",
-        marginRight: -_vm.gutter / 2 + "px"
-      }
-    },
+    { staticClass: "row", style: _vm.rowStyle },
     [_vm._t("default")],
     2
   )
@@ -12981,12 +12972,6 @@ exports.default = void 0;
 //
 //
 //
-//
-//
-//
-//
-//
-//
 var _default = {
   name: "GuluCol",
   props: {
@@ -13002,11 +12987,18 @@ var _default = {
       gutter: 0
     };
   },
-  created: function created() {
-    console.log("col created");
-  },
-  mounted: function mounted() {
-    console.log("col mounted");
+  computed: {
+    colClass: function colClass() {
+      var span = this.span,
+          offset = this.offset;
+      return [span && "col-".concat(span), offset && "offset-".concat(offset)];
+    },
+    colStyle: function colStyle() {
+      return {
+        paddingLeft: this.gutter / 2 + "px",
+        paddingRight: this.gutter / 2 + "px"
+      };
+    }
   }
 };
 exports.default = _default;
@@ -13024,25 +13016,9 @@ exports.default = _default;
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    {
-      staticClass: "col",
-      class: [
-        _vm.span && "col-" + _vm.span,
-        _vm.offset && "offset-" + _vm.offset
-      ],
-      style: {
-        paddingLeft: _vm.gutter / 2 + "px",
-        paddingRight: _vm.gutter / 2 + "px"
-      }
-    },
-    [
-      _c(
-        "div",
-        { staticStyle: { border: "1px solid green", height: "100px" } },
-        [_vm._t("default")],
-        2
-      )
-    ]
+    { staticClass: "col", class: _vm.colClass, style: _vm.colStyle },
+    [_vm._t("default")],
+    2
   )
 }
 var staticRenderFns = []
