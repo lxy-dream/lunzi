@@ -999,3 +999,15 @@
 .tabs-pane[data-v-d57810] {
   padding: 1em;
 }
+.popover[data-v-f235f2] {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+}
+.popover .content-wrapper[data-v-f235f2] {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  border: 1px solid red;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
