@@ -13745,9 +13745,18 @@ new _vue.default({
   },
   created: function created() {},
   methods: {
-    showToast: function showToast() {
+    showToast1: function showToast1() {
+      this.showToast('top');
+    },
+    showToast2: function showToast2() {
+      this.showToast('middle');
+    },
+    showToast3: function showToast3() {
+      this.showToast('bottom');
+    },
+    showToast: function showToast(position) {
       this.$toast("\u4F60\u7684\u667A\u5546\u76EE\u524D\u4E3A ".concat(parseInt(Math.random() * 100), "\u3002\u4F60\u7684\u667A\u5546\u9700\u8981\u5145\u503C\uFF01"), {
-        position: 'bottom',
+        position: position,
         enableHtml: false,
         closeButton: {
           text: '已充值',
