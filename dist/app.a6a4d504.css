@@ -958,11 +958,44 @@
 }
 .tabs {
 }
-.tabs-head {
+.tabs-head[data-v-9b165b] {
+  display: flex;
+  height: 40px;
+  justify-content: flex-start;
+  position: relative;
+  border-bottom: 1px solid #ddd;
+}
+.tabs-head > .line[data-v-9b165b] {
+  position: absolute;
+  bottom: 0;
+  border-bottom: 1px solid blue;
+  transition: all 350ms;
+}
+.tabs-head > .actions-wrapper[data-v-9b165b] {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1em;
 }
 .tabs-body {
 }
-.tabs-item {
+.tabs-item[data-v-1cd80a] {
+  flex-shrink: 0;
+  padding: 0 1em;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
-.tabs-pane {
+.tabs-item.active[data-v-1cd80a] {
+  color: blue;
+  font-weight: bold;
+}
+.tabs-item.disabled[data-v-1cd80a] {
+  color: grey;
+  cursor: not-allowed;
+}
+.tabs-pane[data-v-d57810] {
+  padding: 1em;
 }
