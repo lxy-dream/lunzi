@@ -852,10 +852,25 @@
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
 }
 .layout.hasSider[data-v-9a40c1] {
   flex-direction: row;
+}
+.sider[data-v-c8317b] {
+  position: relative;
+}
+.sider > button[data-v-c8317b] {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.slide-enter-active[data-v-c8317b],
+.slide-leave-active[data-v-c8317b] {
+  transition: all 0.3s;
+}
+.slide-enter[data-v-c8317b],
+.slide-leave-to[data-v-c8317b] {
+  margin-left: -200px;
 }
 .content[data-v-420ed7] {
   flex-grow: 1;
