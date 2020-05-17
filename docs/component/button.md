@@ -1,5 +1,12 @@
+---
+title:Button
+---
+
 # Button
 
-运用方法说明
 
-<button-demos></button-demos>
+
+
+<ClientOnly>
+  <button-demos></button-demos>
+</ClientOnly>
