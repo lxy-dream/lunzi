@@ -32,7 +32,7 @@ module.exports = {
                     '/component/grid',
                     '/component/layout',
                     '/component/toast',
-                    '/component/tabs',
+                    '/component/popover',
                 ]
             },
 
