@@ -1,3 +1,11 @@
-# 柚子 UI 官网
+---
+home: true
+heroImage: /hero.png
+heroText: 柚子UI
+tagline: 一个简洁清新的UI组件
+actionText: 开始 →
+actionLink: /install/
+features:
 
-柚子 UI 是一个很好用的 UI 框架，提供了 button、input、tabs 等常用组件，适合移动端和 PC 端使用。
+footer: Copyright © 2019-present lixiangyu
+---

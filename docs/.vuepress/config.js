@@ -7,12 +7,12 @@ module.exports = {
                 link: '/'
             },
             {
-                text: '文档',
-                link: '/guide/'
+                text: '博客',
+                link: 'https://www.jianshu.com/u/d8eb62398b35'
             },
             {
-                text: '交流',
-                link: 'https://baidu.com'
+                text: 'GitHub',
+                link: 'https://github.com/'
             },
         ],
         sidebar: [{
