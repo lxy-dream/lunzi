@@ -69,7 +69,7 @@
 .demoCol {
   height: 50px;
   border: 1px solid #ccc;
-  background: #eee;
+  background: #ffb367;
   display: flex;
   justify-content: center;
   align-items: center;

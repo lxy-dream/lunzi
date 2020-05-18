@@ -6,9 +6,9 @@
     </p>
 
     <div>
-      <g-button @click="$toast('点击弹出提示')">上方弹出</g-button>
-      <g-button @click="$toast('点击弹出提示', {position:'middle'})">中间弹出</g-button>
-      <g-button @click="$toast('点击弹出提示', {position:'bottom'})">下方弹出</g-button>
+      <g-button @click="$toast('点击弹出提示')" style="background:#58b4ae">上方弹出</g-button>
+      <g-button @click="$toast('点击弹出提示', {position:'middle'})" style="background:#ffb367">中间弹出</g-button>
+      <g-button @click="$toast('点击弹出提示', {position:'bottom'})" style="background:#ffe277">下方弹出</g-button>
     </div>
   </div>
 </template>

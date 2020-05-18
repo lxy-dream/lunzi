@@ -6,19 +6,19 @@
     </p>
 
     <g-popover>
-      <g-button>上方弹出</g-button>
+      <g-button style="background:#58b4ae">上方弹出</g-button>
       <template slot="content">弹出内容</template>
     </g-popover>
     <g-popover position="bottom">
-      <g-button>下方弹出</g-button>
+      <g-button style="background:#ffe277">下方弹出</g-button>
       <template slot="content">弹出内容</template>
     </g-popover>
     <g-popover position="left">
-      <g-button>左边弹出</g-button>
+      <g-button style="background:#ffb367">左边弹出</g-button>
       <template slot="content">弹出内容</template>
     </g-popover>
     <g-popover position="right">
-      <g-button>右边弹出</g-button>
+      <g-button style="background:#ffe2bc">右边弹出</g-button>
       <template slot="content">弹出内容</template>
     </g-popover>
   </div>

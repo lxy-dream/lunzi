@@ -6,7 +6,7 @@
     </p>
 
     <div>
-      <g-button @click="onClickButton">上方弹出</g-button>
+      <g-button @click="onClickButton" style="background:#58b4ae">上方弹出</g-button>
     </div>
   </div>
 </template>

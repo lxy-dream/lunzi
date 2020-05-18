@@ -41,7 +41,7 @@
 .demoCol {
   height: 50px;
   border: 1px solid #ccc;
-  background: #eee;
+  background: #ffe277;
   display: flex;
   justify-content: center;
   align-items: center;
